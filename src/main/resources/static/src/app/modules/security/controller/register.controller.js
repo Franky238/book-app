@@ -1,13 +1,17 @@
 (function () {
     angular.module('Security').controller('RegisterController', function ($scope, FormUtils, toastr) {
-        $scope.user = {};
+        $scope.user = {
+            password: {}
+        };
 
         this.checkUserBy = function (fieldType) {
             var fieldValue = $scope.user[fieldType];
             if (fieldValue) {
-                FormUtils.isUnique(fieldType, fieldValue, function (result) {
-                    $scope.registerForm[fieldType].$setValidity('notUsed', result);
-                    toastr.error('Value ' + fieldValue + ' is already used', 'Please use different ' + fieldType);
+                FormUtils.isUnique(fieldType, fieldValue, function (isNotUsed) {
+                    $scope.registerForm[fieldType].$setValidity('notUsed', isNotUsed);
+                    if (!isNotUsed) {
+                        toastr.error('Value ' + fieldValue + ' is already used', 'Please use different ' + fieldType);
+                    }
                 });
             }
         };
