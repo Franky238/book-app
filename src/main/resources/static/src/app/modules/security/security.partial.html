@@ -73,8 +73,7 @@
                                 required
                                 placeholder="Password..."
                                 ng-trim
-                                ng-model="user.password.first"
-                                ng-blur="registerCtrl.comparePass()"
+                                ng-model="user.password"
                         >
                     </div>
                     <div class="form-group col-md-6">
@@ -83,14 +82,19 @@
                                 name="repeat_password"
                                 class="input--big full-width"
                                 required
-                                ng-model="user.password.second"
+                                ng-model="user.repeatPassword"
                                 placeholder="Repeat Password..."
                                 ng-trim
-                                ng-blur="registerCtrl.comparePass()"
                         >
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block btn-big capitalize">Continue</button>
+                <button
+                        type="submit"
+                        class="btn btn-primary btn-block btn-big capitalize"
+                        ng-disabled="registerForm.$invalid"
+                >
+                    Continue
+                </button>
             </form>
         </div>
     </div>
