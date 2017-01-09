@@ -1,0 +1,12 @@
+input.ng-invalid.ng-touched {
+  border: 2px solid #ee203d;
+  &:focus {
+    border: 3px solid #ee203d;
+  }
+}
+input.ng-valid.ng-touched {
+  border: 2px solid #1eab2f;
+  &:focus {
+    border: 3px solid #1eab2f;
+  }
+}

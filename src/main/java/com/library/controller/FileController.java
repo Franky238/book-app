@@ -38,9 +38,6 @@ public class FileController {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
-    @Autowired
-    private MimeTypeRepository mimeTypeRepository;
-
     @Value("${jwt.authorization.header.key}")
     private String headerKey;
 
@@ -55,7 +52,6 @@ public class FileController {
         FileEntity fileEntity = this.fileGeneratorUtil.create(uploadedFile, userEntity);
 
         this.fileRepository.save(fileEntity);
-
     }
 
     @RequestMapping(value = "/upload/file-content")

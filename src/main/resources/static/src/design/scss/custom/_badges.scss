@@ -1,0 +1,73 @@
+.badge {
+  &.badge-primary {
+    color: $brand-primary;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: $brand-primary;
+      color: #fff;
+    }
+  }
+
+  &.badge-success {
+    color: $brand-success;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: $brand-success;
+      color: #fff;
+    }
+  }
+
+  &.badge-info {
+    color: $brand-info;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: $brand-info;
+      color: #fff;
+    }
+  }
+
+  &.badge-warning {
+    color: $brand-warning;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: $brand-warning;
+      color: #fff;
+    }
+  }
+
+  &.badge-danger {
+    color: $brand-danger;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: $brand-danger;
+      color: #fff;
+    }
+  }
+
+  &.badge-dark {
+    color: #fff;
+    background-color: #212121;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: #212121;
+    }
+  }
+
+  &.badge-lg {
+    font-size: 14px;
+    padding: 6px 8px 6px;
+    font-weight: 500;
+  }
+}

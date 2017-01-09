@@ -1,0 +1,6 @@
+.panel {
+  &.panel-light-blue .panel-heading {
+    background-color: #f2f9fc;
+    border-bottom-color: darken(#f2f9fc, 20%);
+  }
+}

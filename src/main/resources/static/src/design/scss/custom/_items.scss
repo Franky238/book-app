@@ -1,0 +1,12 @@
+.item-name {
+  color: $link-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.list-item:not(:last-child){
+  margin-bottom: 10px;
+}

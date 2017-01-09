@@ -1,0 +1,75 @@
+.loading {
+  background-color: transparent;
+  margin: 5px auto;
+}
+
+.spin-1{
+  background-image: url("../images/ring-alt-120.svg");
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+}
+.spin-2{
+  background-image: url("../images/ring-alt-100.svg");
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+}
+.spin-3{
+  background-image: url("../images/ring-alt-80.svg");
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+.spin-4{
+  background-image: url("../images/ring-alt-60.svg");
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.spin-5{
+  background-image: url("../images/ring-alt-40.svg");
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+.spin-6{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+.middle-spinner {
+  margin-top: -60px;
+  margin-left: -60px;
+}

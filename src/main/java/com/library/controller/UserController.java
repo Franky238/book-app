@@ -73,6 +73,20 @@ public class UserController {
         this.userRepository.save(user);
     }
 
+    @RequestMapping(value = "/auth/check/email", method = RequestMethod.POST)
+    public boolean checkForUniqueEmail(@RequestBody String value) {
+        UserEntity user = this.userRepository.findByEmail(value);
+
+        return user == null;
+    }
+
+    @RequestMapping(value = "/auth/check/username", method = RequestMethod.POST)
+    public boolean checkForUniqueUsername(@RequestBody String value) {
+        UserEntity user = this.userRepository.findByUsername(value);
+
+        return user == null;
+    }
+
     // TEST purposes
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public JwtUser getAuthenticatedUser(HttpServletRequest request) {

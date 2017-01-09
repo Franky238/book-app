@@ -1,0 +1,10 @@
+.bg-image {
+  background: url("../images/collage_01.jpg") 0 0 repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  animation-name: move_bg;
+  animation-duration: 100s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

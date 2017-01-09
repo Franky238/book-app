@@ -31,7 +31,15 @@ public class JwtTokenUtil implements Serializable {
     @Value("${jwt.expiration}")
     private Long expiration;
 
+    @Value("${jwt.authorization.header.value}")
+    private String tokenPrefixValue;
+
     public String getUsernameFromToken(String token) {
+
+        if (token != null && token.startsWith(this.tokenPrefixValue)) {
+            token = token.substring(this.tokenPrefixValue.length()).trim();
+        }
+
         String username;
         try {
             final Claims claims = getClaimsFromToken(token);

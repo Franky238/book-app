@@ -26,16 +26,9 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     @Value("${jwt.authorization.header.key}")
     private String tokenHeader;
 
-    @Value("jwt.authorization.header.value")
-    private String tokenPrefixValue;
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
         String authToken = request.getHeader(this.tokenHeader);
-
-        if (authToken != null && authToken.startsWith(this.tokenPrefixValue)) {
-            authToken = authToken.substring(this.tokenPrefixValue.length()).trim();
-        }
 
         String username = jwtTokenUtil.getUsernameFromToken(authToken);
 

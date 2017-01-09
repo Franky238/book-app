@@ -1,0 +1,97 @@
+<div class="absolute bg-image"></div>
+<div class="absolute overlay bg-grey"></div>
+<ui-view class="flex-fullscreen flex-row flex-top-center">
+    <div class="absolute top transparent-well--narrow full-width text-right">
+        <span class="text-white text-bigger">Already a member?</span>
+        <a ui-sref="security.login" class="btn btn-primary btn-lg ml-15 capitalize">Log In</a>
+    </div>
+    <div class="fcol-md-5 fcol-md-offset-1">
+        <div class="transparent-well--higher">
+            <h3 class="text-white no-mt">Register Now!</h3>
+            <ul class="list-unstyled text-white text-bigger no-margin">
+                <li class="list-item">
+                    <i class="icon-price-tags icon-lg app-icon"></i>
+                    100MB Library is for free!
+                </li>
+                <li class="list-item">
+                    <i class="icon-accessibility icon-lg app-icon"></i>
+                    Meet the authors of the books
+                </li>
+                <li class="list-item">
+                    <i class="icon-cart icon-lg app-icon"></i>
+                    Buy Your favourite e-books directly from author
+                </li>
+                <li class="list-item">
+                    <i class="icon-books icon-lg app-icon"></i>
+                    Build Your custom library
+                </li>
+                <li class="list-item">
+                    <i class="icon-eye icon-lg app-icon"></i>
+                    Read directly from website <a href="#">and more!</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="fcol-md-5" ng-controller="RegisterController as registerCtrl">
+        <div class="transparent-well--higher">
+            <form
+                    method="post"
+                    name="registerForm"
+                    class="register-form"
+                    ng-submit="registerForm.$valid && registerCtrl.save()"
+                    novalidate>
+                <div class="form-group">
+                    <input
+                            type="email"
+                            class="input--big full-width"
+                            name="email"
+                            placeholder="E-mail..."
+                            ng-model="user.email"
+                            ng-blur="registerCtrl.checkUserBy('email')"
+                            required
+                            ng-trim
+                    >
+                </div>
+                <div class="form-group">
+                    <input
+                            type="text"
+                            class="input--big full-width"
+                            name="username"
+                            placeholder="Username..."
+                            ng-model="user.username"
+                            ng-blur="registerCtrl.checkUserBy('username')"
+                            required
+                            ng-trim
+                    >
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <input
+                                type="password"
+                                name="password"
+                                class="input--big full-width"
+                                required
+                                placeholder="Password..."
+                                ng-trim
+                                ng-model="user.password.first"
+                                ng-blur="registerCtrl.comparePass()"
+                        >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input
+                                type="password"
+                                name="repeat_password"
+                                class="input--big full-width"
+                                required
+                                ng-model="user.password.second"
+                                placeholder="Repeat Password..."
+                                ng-trim
+                                ng-blur="registerCtrl.comparePass()"
+                        >
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-big capitalize">Continue</button>
+            </form>
+        </div>
+    </div>
+</ui-view>

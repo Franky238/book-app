@@ -1,0 +1,16 @@
+.fcol-md-5 {
+  flex-basis: 100%;
+  padding: 0 15px;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .fcol-md-5 {
+    flex-basis: 41.66667%;
+    padding: 0 15px;
+  }
+
+  .fcol-md-offset-1 {
+    margin-left: 8.33333%;
+  }
+}

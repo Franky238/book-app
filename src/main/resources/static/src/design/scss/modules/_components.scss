@@ -1,0 +1,43 @@
+//--------------------------------
+// Top well
+//--------------------------------
+
+.transparent-well {
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0,0,0,.5);
+  padding: 35px 40px;
+  border-radius: 8px;
+  height: 300px;
+
+  &--narrow {
+    @extend .transparent-well;
+    height: 70px;
+    padding: 10px 125px;
+    border-radius: 0;
+    line-height: 45px;
+  }
+
+  &--higher {
+    @extend .transparent-well;
+    height: 325px;
+  }
+
+  .input {
+    border: 0;
+    height: 50px;
+    padding: 5px 10px;
+    outline: none !important;
+    border-radius: 3px;
+
+    &--big {
+      @extend .input;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
