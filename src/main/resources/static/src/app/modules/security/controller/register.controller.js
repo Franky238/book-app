@@ -1,5 +1,5 @@
 (function () {
-    angular.module('Security').controller('RegisterController', function ($scope, FormUtils) {
+    angular.module('Security').controller('RegisterController', function ($scope, FormUtils, toastr) {
         $scope.user = {};
 
         this.checkUserBy = function (fieldType) {
@@ -7,6 +7,7 @@
             if (fieldValue) {
                 FormUtils.isUnique(fieldType, fieldValue, function (result) {
                     $scope.registerForm[fieldType].$setValidity('notUsed', result);
+                    toastr.error('Value ' + fieldValue + ' is already used', 'Please use different ' + fieldType);
                 });
             }
         };
