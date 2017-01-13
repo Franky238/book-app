@@ -2,14 +2,32 @@
     <span class="text-white text-bigger">Not a member?</span>
     <a ui-sref="security" class="btn btn-primary btn-lg ml-15 capitalize">Register Now!</a>
 </div>
-<div class="fcol-md-5 fcol-md-offset-1">
+<div class="fcol-md-5 fcol-md-offset-1" ng-controller="LoginController as loginCtrl">
     <div class="transparent-well">
-        <form method="post" action="#" class="login-form">
+        <form
+                method="post"
+                ng-submit="loginCtrl.login()"
+                name="loginForm"
+                class="login-form"
+                novalidate
+        >
             <div class="form-group">
-                <input type="text" class="input--big full-width" name="name" placeholder="Username...">
+                <input
+                        type="text"
+                        class="input--big full-width"
+                        name="name"
+                        placeholder="Username..."
+                        ng-model="credentials.username"
+                >
             </div>
             <div class="form-group">
-                <input type="password" class="input--big full-width" name="password" placeholder="Password...">
+                <input
+                        type="password"
+                        class="input--big full-width"
+                        name="password"
+                        placeholder="Password..."
+                        ng-model="credentials.password"
+                >
             </div>
             <div class="checkbox checkbox-white">
                 <label>

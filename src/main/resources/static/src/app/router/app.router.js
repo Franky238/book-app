@@ -3,7 +3,7 @@ angular.module('app')
         // default
         $urlRouterProvider.otherwise(function ($injector, $location) {
             $injector.invoke(function ($state) {
-                $state.go('security');
+                $state.go('home');
             });
         });
 
@@ -19,6 +19,13 @@ angular.module('app')
             .state('security.login', {
                 url: '/login',
                 templateUrl: 'src/app/modules/security/partial/login.partial.html'
+            })
+            .state('home', {
+                url: '/',
+                templateUrl: 'src/app/modules/security/partial/home.partial.html',
+                data: {
+                    requiresLogin: true
+                }
             })
         ;
     });

@@ -43,6 +43,8 @@ var vendor = [
     paths.vendor + 'angular/angular.min.js',
     paths.vendor + 'angular/angular-ui-router.min.js',
     paths.vendor + 'angular/angular-block-ui/angular-block-ui.min.js',
+    paths.vendor + 'angular/angular-storage/angular-storage.min.js',
+    paths.vendor + 'angular/angular-jwt/angular-jwt.min.js',
     paths.vendor + 'angular/ngAnimate/ngAnimate.js',
     paths.vendor + 'jquery/jquery.min.js',
     paths.vendor + 'bootstrap/directives/ui-bootstrap.min.js',

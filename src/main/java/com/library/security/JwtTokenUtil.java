@@ -134,8 +134,9 @@ public class JwtTokenUtil implements Serializable {
         return generateToken(claims);
     }
 
-    String generateToken(Map<String, Object> claims) {
+    private String generateToken(Map<String, Object> claims) {
         return Jwts.builder()
+                .setHeaderParam("typ", "JWT")
                 .setClaims(claims)
                 .setExpiration(generateExpirationDate())
                 .signWith(SignatureAlgorithm.HS512, secret)

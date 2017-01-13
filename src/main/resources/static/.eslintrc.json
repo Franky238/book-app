@@ -10,6 +10,7 @@
         "indent": ["error", 4]
     },
     "globals": {
-        "angular": false
+        "angular": false,
+        "localStorageService": false
     }
 }

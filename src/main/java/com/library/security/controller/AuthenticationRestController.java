@@ -38,7 +38,8 @@ public class AuthenticationRestController {
     private UserDetailsService userDetailsService;
 
     @RequestMapping(value = "${jwt.route.authentication.path}", method = RequestMethod.POST)
-    public ResponseEntity<?> login(@RequestBody JwtAuthenticationRequest authenticationRequest, Device device) throws AuthenticationException {
+    public ResponseEntity<?> login(@RequestBody JwtAuthenticationRequest authenticationRequest, Device device)
+            throws AuthenticationException {
 
         // Perform the security
         final Authentication authentication = authenticationManager.authenticate(
