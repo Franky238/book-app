@@ -16,7 +16,8 @@
 
         // Modules starts here
         'Common',
-        'Security'
+        'Security',
+        'Reader'
     ];
 
     angular.module('app', modules);
